@@ -1,0 +1,61 @@
+#formulario #estilo{
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 40px;
+  background: rgba(90, 253, 218, 0.658);
+  box-sizing: border-box;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  background-repeat: no-repeat;
+}
+
+#formulario #estilo #inputMain {
+  position: relative;
+}
+
+#formulario #estilo #inputMain input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+#formulario #estilo #inputMain label {
+  position: absolute;
+  top: -30%;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  transition: 0.5s;
+}
+
+#formulario #estilo #inputMain input:focus ~ label{
+    top: -17px;
+    left: 0;
+    color: #04D99D;
+    font-size: 12px;
+}
+
+#formulario #estilo button {
+  position: relative;
+  transform: translate(-50%, -50%);
+  top: 20px;
+  left: 50%;
+  width: 150px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  cursor: pointer;
+  padding: 10px 0;
+  font-size: 15px;
+  color: #fff;
+}

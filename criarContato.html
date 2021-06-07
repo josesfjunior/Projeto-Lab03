@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="./js/vue.min.js"></script>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/formulario.css" />
+    <link rel="stylesheet" href="./css/listarAgenda.css" />
+  </head>
+  <body>
+    <div id="formulario">
+      <div id="estilo">
+        <div id="inputMain">
+          <label for="texto">Nome:</label>
+          <input type="text" id="nome" v-model="nomeField" />
+        </div>
+        <div id="inputMain">
+          <label for="texto">Email:</label>
+          <input type="email" id="email" v-model="emailField" />
+        </div>
+        <div id="inputMain">
+          <label for="texto">Whatsapp:</label>
+          <input type="text" id="numero" v-model="numeroField" />
+        </div>
+        <div id="inputMain">
+          <label for="texto">Instagram:</label>
+          <input type="text" id="insta" v-model="instaField" />
+        </div>
+        <button id="botao" v-on:click="criarContato">Enviar</button>
+      </div>
+      <div id="listar" v-for="(items, index) in agenda" :key="items.id" >
+        <ul >
+          <div id="listar-agenda">
+            <li>Nome:{{items.nome}}</li>
+            <li>Email:{{items.email}}</li>
+            <li>Numero:{{items.numero}}</li>
+            <li>Instagram:{{items.insta}}</li>
+            <button v-on:click="editar">Editar</button>
+            <div id="listar-edicao(index)" v-if= "edicao ==true">
+              <label>Nome</label>
+              <input type="text" id="texto-editado"  v-model="novoNome" placeholder="Insira aqui">
+              <br><br>
+              <label>Email</label>
+              <input type="text" id="texto-editado" v-model="novoEmail" placeholder="Insira aqui">
+              <br><br>
+              <label>Numero</label>
+              <input type="text" id="texto-editado"v-model="novoNumero" placeholder="Insira aqui">
+              <br><br>
+              <label>Instagram</label> 
+              <input type="text" id="texto-editado" v-model="novoInsta" placeholder="Insira aqui">
+              <br><br>
+              <button v-on:click="eviarEdicao(index)"> Enviar</button>
+
+            </div>
+            <button v-on:click="deleteEvent(index)">Remover</button>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <script src="./js/formulario.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

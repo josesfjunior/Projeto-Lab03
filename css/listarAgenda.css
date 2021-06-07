@@ -1,0 +1,19 @@
+#listar-agenda {
+    margin-left: 40%;
+    list-style: none;
+    padding: 5px;
+    border-radius: 15px;;
+     background-color: rgba(90, 253, 218, 0.658);
+    max-width: 25%;
+    text-align: center;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+    font-size: 15px;
+}
+
+#listar-agenda button{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 10px;
+
+}
