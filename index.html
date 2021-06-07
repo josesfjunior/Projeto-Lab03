@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <title>Document</title>
     <script src="./js/vue.min.js"></script>
-    <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/formulario.css" />
     <link rel="stylesheet" href="./css/listarAgenda.css" />
   </head>
@@ -39,16 +38,16 @@
             <button v-on:click="editar">Editar</button>
             <div id="listar-edicao(index)" v-if= "edicao ==true">
               <label>Nome</label>
-              <input type="text" id="texto-editado"  v-model="novoNome" placeholder="Insira aqui">
+              <input type="text"   v-model="novoNome" placeholder="Insira aqui">
               <br><br>
               <label>Email</label>
-              <input type="text" id="texto-editado" v-model="novoEmail" placeholder="Insira aqui">
+              <input type="text"  v-model="novoEmail" placeholder="Insira aqui">
               <br><br>
               <label>Numero</label>
-              <input type="text" id="texto-editado"v-model="novoNumero" placeholder="Insira aqui">
+              <input type="text" v-model="novoNumero" placeholder="Insira aqui">
               <br><br>
               <label>Instagram</label> 
-              <input type="text" id="texto-editado" v-model="novoInsta" placeholder="Insira aqui">
+              <input type="text"  v-model="novoInsta" placeholder="Insira aqui">
               <br><br>
               <button v-on:click="eviarEdicao(index)"> Enviar</button>
 
